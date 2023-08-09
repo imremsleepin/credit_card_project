@@ -17,9 +17,9 @@ class CardProcessor:
     def __init__(self): 
         pass
 
-    def charge(self, cvc, expirationDate, cardNumber, total):
+    def charge(self, CreditCard, amount):
         #vendor operates charge 
-        print(f"Credit Card {cardNumber} has been charged")
+        print(f"Credit Card {CreditCard.cardNumber} has been charged ${amount}")
         pass
         
 
@@ -79,8 +79,9 @@ print(user1.cardNumber)
 
 #Take instance of credit card and try to 'charge' the card
 cardprocessor = CardProcessor()
-cardprocessor.charge(user1.cvc, user1.expirationDate, user1.cardNumber, total = 123)  
-
+#cardprocessor.charge(user1.cvc, user1.expirationDate, user1.cardNumber, total = 123)
+cardprocessor.charge(user1,amount = 123)
+#cardprocessor.charge(CreditCard.user1, total = 123)   
 
 
 
