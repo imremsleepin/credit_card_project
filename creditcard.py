@@ -17,10 +17,9 @@ class CardProcessor:
     def __init__(self): 
         pass
 
-    def charge(self, CreditCard, amount):
+    def charge(self, creditCard, amount):
         #vendor operates charge 
-        print(f"Credit Card {CreditCard.cardNumber} has been charged ${amount}")
-        pass
+        print(f"Credit Card {creditCard.cardNumber} has been charged ${amount}")
         
 
 class ProcessorInfo:
@@ -71,17 +70,17 @@ class User:
 
     
 #test instance of credit card
-user1 = CreditCard(cvc = '323', expirationDate = 'March 8, 2023', cardNumber = '1234 1234 1234 1234') 
+credit1 = CreditCard(cvc = '323', expirationDate = 'March 8, 2023', cardNumber = '1234 1234 1234 1234') 
 
-print(user1.cvc)
-print(user1.expirationDate)
-print(user1.cardNumber)
+print(credit1.cvc)
+print(credit1.expirationDate)
+print(credit1.cardNumber)
 
 #Take instance of credit card and try to 'charge' the card
 cardprocessor = CardProcessor()
-#cardprocessor.charge(user1.cvc, user1.expirationDate, user1.cardNumber, total = 123)
-cardprocessor.charge(user1,amount = 123)
-#cardprocessor.charge(CreditCard.user1, total = 123)   
+cardprocessor.charge(creditCard = credit1, amount = 123)
+
+#cardprocessor.charge(CreditCard.user1, total = 123) --> this will search within creditcard class for property named user1.. lol this is wrong  
 
 
 
